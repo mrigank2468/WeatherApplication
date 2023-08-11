@@ -1,0 +1,397 @@
+.details_container {
+  min-height: 88vh;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(24px, 1fr));
+  grid-template-rows: minmax(11vh, auto) minmax(77vh, auto);
+  grid-template-areas:
+    "s s s s s s s s s s s s"
+    ". . d d d d d d d d . .";
+
+  .left_side {
+    grid-area: s;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 1.2rem;
+
+    p {
+      margin: 0;
+    }
+
+    .icon_back_button {
+      display: flex;
+      align-items: center;
+
+      .icon_back {
+        color: #2c2c2c;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      .back_button {
+        font-weight: 500;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        border: transparent;
+        background-color: transparent;
+        color: #0170fe;
+      }
+    }
+
+    .right_side {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      .add_to_list_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .add_to_list {
+          text-transform: capitalize;
+          background: #009456;
+          border-radius: 7px;
+          border: transparent;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          margin-left: 1rem;
+
+          display: flex;
+          align-items: center;
+
+          .check_icon {
+            margin-left: 0.24rem;
+            font-size: small;
+          }
+        }
+
+        .remove_button {
+          text-transform: capitalize;
+          background: #ec7272;
+          border-radius: 7px;
+          border: transparent;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          margin-left: 1rem;
+        }
+      }
+      .button_container {
+        display: flex;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+
+      .add_button {
+        font-weight: 500;
+        font-size: 1.1rem;
+        text-transform: capitalize;
+        border: transparent;
+        background-color: transparent;
+        color: #2c2c2c;
+        background: #dadada;
+        border-radius: 65%;
+
+        text-align: center;
+        margin-left: 1.4rem;
+      }
+    }
+  }
+
+  .wrapper {
+    grid-area: d;
+    margin-top: -2rem;
+    .basic_info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      * {
+        margin: 0;
+      }
+
+      .weather_icon {
+        width: 100px;
+        height: 100px;
+      }
+
+      .city {
+        font-weight: 600;
+        color: #2c2c2c;
+        font-size: 1.8rem;
+        letter-spacing: 1.4px;
+      }
+
+      .temp {
+        margin-top: 0.5rem;
+        font-weight: 500;
+        color: #2c2c2c;
+        font-size: 3.4rem;
+      }
+    }
+
+    .details {
+      background: #fdfcfc;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 11px;
+      margin-top: 1.2rem;
+      min-height: 8vh;
+      padding: 0.4rem;
+      display: flex;
+      gap: 4px;
+
+      .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem;
+
+        p {
+          font-size: 1.2rem;
+          color: #5a5a5a;
+        }
+
+        p {
+          color: #535353;
+        }
+      }
+    }
+
+    .graph_wrap {
+      background: #fdfcfc;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 11px;
+      margin-top: 1.2rem;
+      min-height: 34vh;
+      padding: 0.4rem 1.2rem;
+      display: flex;
+
+      .day_info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-width: 265px;
+       
+        * {
+          margin: 0;
+        }
+
+        .content {
+          margin-top: 13rem;
+        }
+      }
+
+      .graph {
+        flex: 1;
+        display: flex;
+        max-width: 550px;
+        min-width: 300px;
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+  }
+}
+@media all and (max-width: 860px) {
+  .details_container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(20px, 1fr));
+    grid-template-rows: minmax(11vh, auto) minmax(70vh, auto);
+    grid-template-areas:
+      "s s s s s s s s s s s s"
+      ". d d d d d d d d d d .";
+
+    .left_side {
+      grid-area: s;
+      display: flex;
+      align-items: center;
+      padding: 0.2rem 0.7rem;
+
+      p {
+        margin: 0;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .icon_back {
+          color: #2c2c2c;
+          width: 18px;
+          height: 18px;
+        }
+
+        .back_button {
+          font-weight: 500;
+          font-size: 0.9rem;
+          text-transform: capitalize;
+          border: transparent;
+          background-color: transparent;
+          color: #0170fe;
+        }
+      }
+
+      .right_side {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        .add_to_list_button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .add_to_list {
+            border-radius: 7px;
+            padding: 0.4rem 0.5rem;
+            margin-left: 1rem;
+            display: flex;
+            align-items: center;
+
+            font-size: 0.75rem;
+            .check_icon {
+              margin-left: 0.24rem;
+              width: 18px;
+              height: 18px;
+            }
+          }
+
+          .remove_button {
+            border-radius: 7px;
+            border: transparent;
+            padding: 0.4rem 0.5rem;
+            margin-left: 0.34rem;
+
+            font-size: 0.75rem;
+          }
+        }
+
+        p {
+          font-size: 0.85rem;
+          font-weight: 500;
+        }
+
+        .add_button {
+          border-radius: 50%;
+          background-color: transparent;
+          border: 1px solid #2c2c2c;
+          text-align: center;
+          margin-left: 0.8rem;
+
+          .btn_icon {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+
+    .wrapper {
+      grid-area: d;
+      margin-top: -0.8rem;
+
+      .basic_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        * {
+          margin: 0;
+        }
+
+        .weather_icon {
+          width: 80px;
+          height: 80px;
+        }
+
+        .city {
+          font-weight: 500;
+          color: #2c2c2c;
+          font-size: 1.4rem;
+          letter-spacing: 1.1px;
+        }
+
+        .temp {
+          margin-top: 0.2rem;
+          font-weight: 500;
+          color: #2c2c2c;
+          font-size: 2.6rem;
+        }
+      }
+
+      .details {
+        margin-top: 1rem;
+        padding: 0.2rem;
+        gap: 2px;
+
+        .item {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0.1rem 0rem;
+
+          p {
+            font-size: 0.76rem;
+          }
+        }
+      }
+
+      .graph_wrap {
+        margin-top: 1rem;
+        padding: 0.2rem 0.7rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.2rem;
+
+        .day_info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          min-width: 200px;
+
+          * {
+            margin: 0;
+          }
+
+          h6 {
+            margin-top: 0.4rem;
+            color: #c4c4c4;
+            font-weight: 500;
+          }
+
+          .head {
+            font-size: 0.9rem;
+
+            span {
+              font-size: 0.8rem;
+            }
+          }
+
+          .content {
+            margin-top: 1rem;
+          }
+        }
+
+        .graph {
+          flex: 1;
+          display: flex;
+          margin-top: 1.2rem;
+
+          max-width: initial;
+          min-height: 30vh;
+          min-width: 200px;
+
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

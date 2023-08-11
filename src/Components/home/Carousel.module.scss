@@ -1,0 +1,292 @@
+.carusel_item {
+  min-height: 60vh;
+
+  .detail_container {
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(24px, auto));
+    grid-template-rows: minmax(11vh, auto) minmax(77vh, auto);
+    grid-template-areas:
+      ". s s s s s s s s s s ."
+      ". d d d d d d d d d d .";
+    place-items: center;
+
+    .button_container {
+      grid-area: s;
+      display: flex;
+      align-items: center;
+      padding: 0.2rem 0rem;
+      width: 86%;
+
+      p {
+        margin: 0;
+      }
+
+      .right {
+        margin-left: auto;
+        text-align: right;
+
+        .remove_buton {
+          text-transform: capitalize;
+          background: #ec7272;
+          border-radius: 7px;
+          border: transparent;
+          color: #fff;
+          padding: 0.5rem 0.8rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .wrapper {
+      grid-area: d;
+      margin-top: -2rem;
+      margin-bottom: 2.2rem;
+      .introduction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        * {
+          margin: 0;
+        }
+        .weath_icon {
+          width: 100px;
+          height: 100px;
+        }
+        .city {
+          font-weight: 500;
+          color: #2c2c2c;
+          font-size: 1.4rem;
+          letter-spacing: 1.4px;
+        }
+
+        .temperature {
+          margin-top: 0.5rem;
+          font-weight: 500;
+          color: #2c2c2c;
+          font-size: 2.4rem;
+        }
+      }
+
+      .details {
+        width: 100%;
+        background: #fdfcfc;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 11px;
+        margin-top: 1rem;
+        min-height: 8vh;
+        padding: 0.2rem;
+        display: flex;
+        gap: 3px;
+
+        .item {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0.4rem;
+
+          h5 {
+            font-size: 0.95rem;
+            color: #5a5a5a;
+          }
+
+          h6 {
+            font-size: 0.9;
+            color: #535353;
+          }
+        }
+      }
+
+      .graph_container {
+        width: 100%;
+        background: #fdfcfc;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 11px;
+        margin-top: 1.2rem;
+        min-height: 34vh;
+        padding: 0.4rem 1rem;
+        display: flex;
+
+        .day_info {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          min-width: 220px;
+
+          * {
+            margin: 0;
+          }
+
+          h6 {
+            margin-top: 0.8rem;
+            color: #c4c4c4;
+            font-weight: 400;
+            font-size: 0.8rem;
+          }
+
+          .content {
+            margin-top: 4rem;
+          }
+        }
+
+        .graph {
+          flex: 1;
+          display: flex;
+          max-width: 500px;
+          min-width: 300px;
+          align-items: center;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 860px) {
+  .Carousel_container {
+    margin-bottom: 1rem;
+
+    .carusel_item {
+      .detail_container {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(20px, 1fr));
+        .button_container {
+          width: 85%;
+          .right {
+            margin-left: auto;
+            text-align: right;
+            .remove_buton {
+              background: #ec7272;
+              border-radius: 7px;
+              font-size: 0.8rem;
+              padding: 0.4rem 0.7rem;
+            }
+          }
+        }
+
+        .wrapper {
+          grid-area: d;
+          margin-top: -2.2rem;
+          margin-bottom: 2.8rem;
+          width: 120%;
+          .introduction {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            * {
+              margin: 0;
+            }
+
+            .weath_icon {
+              width: 90px;
+              height: 90px;
+            }
+
+            .city {
+              color: #2c2c2c;
+
+              font-weight: 600;
+              font-size: 1.6rem;
+              letter-spacing: 1.2px;
+            }
+
+            .temperature {
+              color: #2c2c2c;
+              font-weight: 500;
+
+              margin-top: 0.4rem;
+              font-size: 2rem;
+            }
+          }
+
+          .details {
+            width: 100%;
+            border-radius: 11px;
+            margin-top: 1rem;
+            display: flex;
+            gap: 1px;
+            padding: 0.15rem;
+            min-height: 6vh;
+            padding: 0.4rem 0.1rem;
+
+            .item {
+              padding: 0rem;
+
+              h5 {
+                text-transform: capitalize;
+                font-size: 0.74rem;
+                color: #5a5a5a;
+              }
+
+              h6 {
+                font-size: 0.68rem;
+                color: #535353;
+              }
+            }
+          }
+
+          .graph_container {
+            width: 100%;
+            border-radius: 11px;
+            margin-top: 1.2rem;
+            min-height: 34vh;
+            padding: 0.4rem 0.7rem;
+            display: flex;
+            flex-direction: column;
+
+            .day_info {
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              min-width: 200px;
+
+              * {
+                margin: 0;
+              }
+
+              h6:nth-child(1) {
+                margin-top: 0.4rem;
+              }
+
+              .head {
+                color: #c4c4c4;
+                font-weight: 400;
+                font-size: 0.84rem;
+
+                span {
+                  font-size: 0.78rem;
+                }
+              }
+
+              .content {
+                margin-top: 1rem;
+              }
+            }
+
+            .graph {
+              flex: 1;
+              display: flex;
+
+              margin-top: 2rem;
+              max-width: initial;
+              min-height: 30vh;
+              min-width: 100px;
+
+              align-items: center;
+              justify-content: space-around;
+            }
+          }
+        }
+      }
+    }
+  }
+}

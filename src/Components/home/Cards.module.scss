@@ -1,0 +1,156 @@
+.card_container {
+  min-height: 30vh;
+  width: 35%;
+  background: #fdfcfc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 11px;
+
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  padding: 1rem 1rem;
+
+  .card_header {
+    display: flex;
+    margin-top: 0.2rem;
+
+    .text {
+      font-size: 1.05rem;
+      color: #2c2c2c;
+    }
+
+    .next_button {
+      margin-left: auto;
+      background-color: transparent;
+      border: transparent;
+      color: #2c2c2c;
+    }
+  }
+
+  .card_content {
+    display: flex;
+    align-items: center;
+    margin-top: 1.2rem;
+
+    .temperature {
+      flex: 1;
+      margin: 0;
+      font-size: 3.6rem;
+      font-weight: 500;
+    }
+
+    .weathericon {
+      flex: 1;
+    }
+  }
+  .warning {
+    display: flex;
+  }
+  .warning_text {
+    margin-left: 10px;
+  }
+  .card_footer {
+    display: flex;
+    margin-top: 5.8rem;
+
+    p {
+      margin: 0;
+    }
+
+    .warning {
+      display: flex;
+      align-items: center;
+
+      p {
+        text-transform: uppercase;
+        color: #bfaf1b;
+        margin-left: 0.4rem;
+      }
+    }
+
+    .warning_description {
+      margin-left: auto;
+
+      p {
+        text-transform: capitalize;
+        color: #bfaf1b;
+      }
+    }
+  }
+}
+@media all and (max-width: 860px) {
+  .card_container {
+    min-height: 24vh;
+    width: 100%;
+    border-radius: 7px;
+    margin-left: 0rem;
+    margin-top: 0rem;
+    padding: 1rem 0.8rem;
+
+    .card_header {
+      display: flex;
+      margin-top: 0.1rem;
+
+      .text {
+        font-size: 1.2rem;
+        color: #2c2c2c;
+      }
+
+      .next_button {
+        margin-left: auto;
+        background-color: transparent;
+        border: transparent;
+        color: #2c2c2c;
+
+        .nav_icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    .card_content {
+      display: flex;
+      align-items: center;
+      margin-top: 0.2rem;
+
+      .temperature {
+        flex: 1;
+        margin: 0;
+        font-size: 2.8rem;
+        font-weight: 500;
+      }
+
+      .weather_icon {
+        flex: 0;
+      }
+    }
+
+    .card_footer {
+      display: flex;
+      margin-top: 0.2rem;
+
+      p {
+        margin: 0;
+      }
+
+      .warning {
+        display: flex;
+        align-items: center;
+
+        p {
+          margin-left: 0.4rem;
+
+          font-size: 0.9rem;
+        }
+      }
+
+      .warning_description {
+        margin-left: auto;
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
